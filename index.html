@@ -3,49 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore personal projects, experiments, and development journeys.">
+    <meta name="keywords" content="personal projects, programming, portfolio, development">
     <title>Python's Den</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #1e90ff;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        nav {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background: #333;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #1e90ff;
         }
         .container {
-            text-align: center;
             padding: 2rem;
-            background-color: #2d2d2d;
-            border-radius: 10px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            max-width: 1100px;
+            margin: auto;
         }
-        h1 {
-            color: #00ff9d;
-            text-shadow: 0 0 10px rgba(0,255,157,0.3);
-            font-size: 2.5em;
+        .project {
+            background: #fff;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            color: #4B8BBE; /* Python blue */
-            font-size: 1.5em;
-            margin-top: 1.5em;
+        .project h3 {
+            margin: 0;
+            color: #1e90ff;
         }
-        p {
-            color: #cccccc;
-            line-height: 1.6;
-            margin: 0.5em 0;
+        .project p {
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e90ff;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Python's Den</h1>
+        <p>Hi there! Explore my personal projects and journey in development.</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <div class="container">
-        <h1>Python's Den</h1>
-        <h2>About Me</h2>
-        <p>I'm Python! Just a silly thing that loves coding, books, planes, and games.</p>
-        <h2>Goals</h2>
-        <p>Expanded out to host personal projects.</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm Python, a developer who enjoys coding and building projects. This site showcases my work and experiments.</p>
+            <p>Note: Links to individual projects will be added soon as I complete their implementation.</p>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A responsive, multi-page portfolio website designed to showcase my projects and achievements.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 2: Task Manager App</h3>
+                <p>A lightweight task manager built with JavaScript, featuring dynamic UI updates and local storage support.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 3: Data Visualizer</h3>
+                <p>Interactive data visualizations created with Python and JavaScript libraries.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to reach out, feel free to email me at: <strong>python@example.com</strong></p>
+        </section>
     </div>
+    <footer>
+        <p>&copy; 2025 Python's Den. All rights reserved.</p>
+    </footer>
 </body>
 </html>
