@@ -38,22 +38,41 @@
         nav {
             display: flex;
             justify-content: center;
+            align-items: center;
             background: #112240;
-            padding: 0.75rem;
+            padding: 0.5rem;
             position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
+            flex-wrap: nowrap; /* Prevents wrapping */
         }
+
         nav a {
             color: #8892b0;
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0 0.75rem;
             font-size: 1rem;
             transition: color 0.3s ease;
+            white-space: nowrap; /* Prevents text from breaking into multiple lines */
         }
+
         nav a:hover {
             color: #64ffda;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.5rem; /* Reduce padding on smaller screens */
+                overflow-x: auto; /* Allows horizontal scrolling if needed */
+                justify-content: space-around; /* Keeps links evenly spaced */
+            }
+
+            nav a {
+                font-size: 0.9rem; /* Slightly smaller text to fit better */
+                margin: 0 0.5rem;
+            }
         }
 
         /* Content */
@@ -73,17 +92,6 @@
             color: #8892b0;
             padding: 1.5rem;
             margin-top: 2rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 0.5rem 0;
-            }
         }
     </style>
 </head>
