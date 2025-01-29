@@ -11,11 +11,16 @@
     <meta property="og:type" content="website">
     <title>Python's Den</title>
     <style>
+        /* Prevent horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             color: #d3d3d3;
             background-color: #0a192f;
         }
@@ -45,7 +50,8 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            flex-wrap: nowrap; /* Prevents wrapping */
+            flex-wrap: nowrap;
+            overflow-x: hidden; /* Prevents side scrolling */
         }
 
         nav a {
@@ -54,23 +60,22 @@
             margin: 0 0.75rem;
             font-size: 1rem;
             transition: color 0.3s ease;
-            white-space: nowrap; /* Prevents text from breaking into multiple lines */
+            white-space: nowrap; /* Prevents wrapping */
         }
 
         nav a:hover {
             color: #64ffda;
         }
 
-        /* Mobile Optimization */
+        /* Mobile Fix */
         @media (max-width: 768px) {
             nav {
-                padding: 0.5rem; /* Reduce padding on smaller screens */
-                overflow-x: auto; /* Allows horizontal scrolling if needed */
-                justify-content: space-around; /* Keeps links evenly spaced */
+                padding: 0.5rem;
+                justify-content: space-around;
             }
 
             nav a {
-                font-size: 0.9rem; /* Slightly smaller text to fit better */
+                font-size: 0.9rem;
                 margin: 0 0.5rem;
             }
         }
