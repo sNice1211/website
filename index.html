@@ -6,12 +6,9 @@
     <meta name="description" content="Explore Python's Den – a hub for personal projects, coding experiments, and development insights.">
     <meta name="keywords" content="developer, programming, portfolio, projects, coding">
     <meta name="author" content="Python">
-    <meta property="og:title" content="Python's Den - Developer Portfolio">
-    <meta property="og:description" content="A personal website showcasing projects and coding experiments.">
-    <meta property="og:type" content="website">
     <title>Python's Den</title>
     <style>
-        /* Ensure full-page layout */
+        /* General Styles */
         html, body {
             height: 100%;
             margin: 0;
@@ -39,8 +36,7 @@
             align-items: center;
             background: #112240;
             padding: 0.75rem;
-            flex-wrap: nowrap;
-            overflow-x: hidden;
+            flex-wrap: wrap; /* Fixes cutting-off issue */
         }
 
         nav a {
@@ -57,9 +53,9 @@
         }
 
         /* Responsive Navigation for Small Screens */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             nav {
-                flex-wrap: wrap;
+                justify-content: space-around;
                 padding: 0.5rem;
             }
 
@@ -77,7 +73,7 @@
             margin: auto;
         }
 
-        /* Footer stays at the bottom */
+        /* Footer */
         footer {
             text-align: center;
             background: #112240;
