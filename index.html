@@ -1,43 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNDER CONSTRUCTION</title>
-  <meta name="description" content="Python's Den is under construction. Please visit https://sites.pythonsden.net instead">
-  <meta name="author" content="Python">
-  <style>
-    body {
-      background-color: #222;
-      color: #eee;
-      font-family: sans-serif;
-    }
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-    }
-    p {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-    footer {
-      text-align: center;
-      font-size: 1rem;
-      margin-top: 2rem;
-    }
-    @media only screen and (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Python's Den – a hub for personal projects, coding experiments, and development insights.">
+    <meta name="keywords" content="developer, programming, portfolio, projects, coding">
+    <meta name="author" content="Python">
+    <title>Python's Den</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-  <h1>UNDER CONSTRUCTION</h1>
-  <p>Python's Den is currently undergoing an overhaul to improve user experience. Please check back at a later time.</p>
-  <footer>© Python’s Den 2025</footer>
+    <header>
+        <h1>Welcome to Python's Den</h1>
+        <p>Hi there! Explore my personal projects and journey in development.</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#about">
+                    <span class="material-icons">person</span>
+                    About
+                </a>
+                <a href="#projects">
+                    <span class="material-icons">code</span>
+                    Projects
+                </a>
+                                <a href="#contact">
+                    <span class="material-icons">contact_mail</span>
+                    Contact
+                </a>
+                <a href="https://panel.pythonsden.net" class="external">
+                    <span class="material-icons">dashboard</span>
+                    Panel
+                </a>
+                <a href="https://blog.pythonsden.net" class="external">
+                    <span class="material-icons">article</span>
+                    Blog
+                </a>
+            </div>
+            
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#about">
+                    <span class="material-icons">person</span>
+                    About
+                </a>
+                <a href="#projects">
+                    <span class="material-icons">code</span>
+                    Projects
+                </a>
+                <a href="#contact">
+                    <span class="material-icons">contact_mail</span>
+                    Contact
+                </a>
+                <a href="https://panel.pythonsden.net" class="external">
+                    <span class="material-icons">dashboard</span>
+                    Panel
+                </a>
+                <a href="https://blog.pythonsden.net" class="external">
+                    <span class="material-icons">article</span>
+                    Blog
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="card fade-in">
+            <div class="card-header">
+                <h2>
+                    <span class="material-icons">person</span>
+                    About Me
+                </h2>
+            </div>
+            <div class="card-content">
+                <p>Hi! I'm Python, a developer who enjoys coding and building projects. This site showcases my work and experiments in web development, programming, and various technical endeavors.</p>
+                <p><strong>Note:</strong> Links to individual projects will be added soon as I feel like sharing them. Stay tuned for more exciting content!</p>
+            </div>
+        </section>
+
+        <section id="projects" class="card fade-in">
+            <div class="card-header">
+                <h2>
+                    <span class="material-icons">code</span>
+                    My Projects
+                </h2>
+            </div>
+            <div class="card-content">
+                <p>Here are some of the projects I've been working on. Each one represents a different aspect of my development journey.</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>
+                            <a href="https://vscode.pythonsden.net">
+                                <span class="material-icons">code</span>
+                                Visual Studio Code
+                            </a>
+                        </h3>
+                        <p>A browser-based implementation of VS Code that runs on an external server. Please be courteous as all files are visible to everyone else who uses the site. This is a work in progress.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>
+                            <a href="/sites">
+                                <span class="material-icons">backup</span>
+                                Google Sites Backup
+                            </a>
+                        </h3>
+                        <p>A backup of the homepage hosted on Google Sites just in case I mess something up. Always good to have a fallback!</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>
+                            <a href="/radar">
+                                <span class="material-icons">radar</span>
+                                AtticRadar
+                            </a>
+                        </h3>
+                        <p>A browser-based live weather radar made by <a href="https://github.com/SteepAtticStairs">SteepAtticStairs</a>. Perfect for tracking weather patterns in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="card fade-in">
+            <div class="card-header">
+                <h2>
+                    <span class="material-icons">contact_mail</span>
+                    Get In Touch
+                </h2>
+            </div>
+            <div class="card-content">
+                <p>Feel free to connect with me through any of these platforms. I'm always open to discussing new projects and ideas!</p>
+                
+                <div class="contact-grid">
+                    
+                    <div class="contact-item">
+                        <a href="/discord">
+                            <span class="material-icons">forum</span>
+                            DiscRealms Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Python's Den. All rights reserved. Built with ❤️</p>
+    </footer>
+
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
