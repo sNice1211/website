@@ -115,3 +115,24 @@ window.addEventListener('resize', function() {
         mobileMenu.classList.remove('active');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('#message .contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span class="material-icons">hourglass_empty</span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Reset button after 3 seconds (form will redirect anyway)
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 3000);
+        });
+    }
+});

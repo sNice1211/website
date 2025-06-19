@@ -6,91 +6,162 @@
     <meta name="description" content="Explore Python's Den – a hub for personal projects, coding experiments, and development insights.">
     <meta name="keywords" content="developer, programming, portfolio, projects, coding">
     <meta name="author" content="Python">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Python's Den - Developer Portfolio">
+    <meta property="og:description" content="Explore Python's Den – a hub for personal projects, coding experiments, and development insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pythonsden.net">
+    <meta property="og:image" content="https://pythonsden.net/og-image.jpg">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Python's Den - Developer Portfolio">
+    <meta name="twitter:description" content="Explore Python's Den – a hub for personal projects, coding experiments, and development insights.">
+    
     <title>Python's Den</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pythonsden.net">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="index.css" as="style">
+    <link rel="preload" href="index.js" as="script">
+    
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Python",
+      "url": "https://pythonsden.net",
+      "jobTitle": "Developer",
+      "description": "A developer who enjoys coding and building projects"
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip navigation link for accessibility - hidden by default -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
         <h1>Welcome to Python's Den</h1>
         <p>Hi there! Explore my personal projects and journey in development.</p>
     </header>
     
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-links">
                 <a href="#about">
-                    <span class="material-icons">person</span>
+                    <span class="material-icons" aria-hidden="true">person</span>
                     About
                 </a>
                 <a href="#projects">
-                    <span class="material-icons">code</span>
+                    <span class="material-icons" aria-hidden="true">code</span>
                     Projects
                 </a>
-                                <a href="#contact">
-                    <span class="material-icons">contact_mail</span>
+                <a href="#contact">
+                    <span class="material-icons" aria-hidden="true">contact_mail</span>
                     Contact
                 </a>
-                <a href="https://panel.pythonsden.net" class="external">
-                    <span class="material-icons">dashboard</span>
+                <a href="#message">
+                    <span class="material-icons" aria-hidden="true">send</span>
+                    Message
+                </a>
+                <a href="https://panel.pythonsden.net" class="external" rel="noopener noreferrer" target="_blank">
+                    <span class="material-icons" aria-hidden="true">dashboard</span>
                     Panel
                 </a>
-                <a href="https://blog.pythonsden.net" class="external">
-                    <span class="material-icons">article</span>
+                <a href="https://blog.pythonsden.net" class="external" rel="noopener noreferrer" target="_blank">
+                    <span class="material-icons" aria-hidden="true">article</span>
                     Blog
                 </a>
             </div>
             
-            <div class="burger-menu" id="burgerMenu">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-            </div>
+            <button class="burger-menu" id="burgerMenu" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
             
             <div class="mobile-menu" id="mobileMenu">
                 <a href="#about">
-                    <span class="material-icons">person</span>
+                    <span class="material-icons" aria-hidden="true">person</span>
                     About
                 </a>
                 <a href="#projects">
-                    <span class="material-icons">code</span>
+                    <span class="material-icons" aria-hidden="true">code</span>
                     Projects
                 </a>
                 <a href="#contact">
-                    <span class="material-icons">contact_mail</span>
+                    <span class="material-icons" aria-hidden="true">contact_mail</span>
                     Contact
                 </a>
-                <a href="https://panel.pythonsden.net" class="external">
-                    <span class="material-icons">dashboard</span>
+                <a href="#message">
+                    <span class="material-icons" aria-hidden="true">send</span>
+                    Message
+                </a>
+                <a href="https://panel.pythonsden.net" class="external" rel="noopener noreferrer" target="_blank">
+                    <span class="material-icons" aria-hidden="true">dashboard</span>
                     Panel
                 </a>
-                <a href="https://blog.pythonsden.net" class="external">
-                    <span class="material-icons">article</span>
+                <a href="https://blog.pythonsden.net" class="external" rel="noopener noreferrer" target="_blank">
+                    <span class="material-icons" aria-hidden="true">article</span>
                     Blog
                 </a>
             </div>
         </div>
     </nav>
 
-    <main class="container">
+    <!-- Loading spinner -->
+    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+        <span class="material-icons">hourglass_empty</span>
+        Loading...
+    </div>
+
+    <main class="container" id="main-content">
         <section id="about" class="card fade-in">
             <div class="card-header">
                 <h2>
-                    <span class="material-icons">person</span>
+                    <span class="material-icons" aria-hidden="true">person</span>
                     About Me
                 </h2>
             </div>
             <div class="card-content">
                 <p>Hi! I'm Python, a developer who enjoys coding and building projects. This site showcases my work and experiments in web development, programming, and various technical endeavors.</p>
                 <p><strong>Note:</strong> Links to individual projects will be added soon as I feel like sharing them. Stay tuned for more exciting content!</p>
+                
+                <!-- Skills section -->
+                <div class="skills-section">
+                    <h3>Technologies & Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Server Management</span>
+                        <span class="skill-tag">Discord Bots</span>
+                        <span class="skill-tag">Minecraft Servers</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="card fade-in">
             <div class="card-header">
                 <h2>
-                    <span class="material-icons">code</span>
+                    <span class="material-icons" aria-hidden="true">code</span>
                     My Projects
                 </h2>
             </div>
@@ -98,43 +169,60 @@
                 <p>Here are some of the projects I've been working on. Each one represents a different aspect of my development journey.</p>
                 
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
                         <h3>
-                            <a href="https://vscode.pythonsden.net">
-                                <span class="material-icons">code</span>
-                                Visual Studio Code
+                            <a href="https://vscode.pythonsden.net" itemprop="url" rel="noopener noreferrer" target="_blank">
+                                <span class="material-icons" aria-hidden="true">code</span>
+                                <span itemprop="name">Visual Studio Code</span>
                             </a>
                         </h3>
-                        <p>A browser-based implementation of VS Code that runs on an external server. Please be courteous as all files are visible to everyone else who uses the site. This is a work in progress.</p>
+                        <p itemprop="description">A browser-based implementation of VS Code that runs on an external server. Please be courteous as all files are visible to everyone else who uses the site. This is a work in progress.</p>
+                        <div class="project-meta">
+                            <span class="project-status active">Active</span>
+                            <span class="project-tech">Web Development</span>
+                        </div>
                     </div>
                     
-                    <div class="project-card">
+                    <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
                         <h3>
-                            <a href="/sites">
-                                <span class="material-icons">backup</span>
-                                Google Sites Backup
+                            <a href="/sites" itemprop="url">
+                                <span class="material-icons" aria-hidden="true">backup</span>
+                                <span itemprop="name">Google Sites Backup</span>
                             </a>
                         </h3>
-                        <p>A backup of the homepage hosted on Google Sites just in case I mess something up. Always good to have a fallback!</p>
+                        <p itemprop="description">A backup of the homepage hosted on Google Sites just in case I mess something up. Always good to have a fallback!</p>
+                        <div class="project-meta">
+                            <span class="project-status maintenance">Backup</span>
+                            <span class="project-tech">Google Sites</span>
+                        </div>
                     </div>
                     
-                    <div class="project-card">
+                    <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
                         <h3>
-                            <a href="/radar">
-                                <span class="material-icons">radar</span>
-                                AtticRadar
+                            <a href="/radar" itemprop="url">
+                                <span class="material-icons" aria-hidden="true">radar</span>
+                                <span itemprop="name">AtticRadar</span>
                             </a>
                         </h3>
-                        <p>A browser-based live weather radar made by <a href="https://github.com/SteepAtticStairs">SteepAtticStairs</a>. Perfect for tracking weather patterns in real-time.</p>
+                        <p itemprop="description">A browser-based live weather radar made by <a href="https://github.com/SteepAtticStairs" rel="noopener noreferrer" target="_blank">SteepAtticStairs</a>. Perfect for tracking weather patterns in real-time.</p>
+                        <div class="project-meta">
+                            <span class="project-status active">Active</span>
+                            <span class="project-tech">Weather API</span>
+                        </div>
                     </div>
-                    <div class="project-card">
+                    
+                    <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
                        <h3>
-                          <a href="https://docs.google.com/document/d/1vNcYWjvMuiLm-D59rKgV6N2MD0ob0FLa64QC9fQkZE4/edit?usp=sharing">
-                             <span class="material-icons">code</span>
-                                DWC Minecraft server
+                          <a href="https://docs.google.com/document/d/1vNcYWjvMuiLm-D59rKgV6N2MD0ob0FLa64QC9fQkZE4/edit?usp=sharing" itemprop="url" rel="noopener noreferrer" target="_blank">
+                             <span class="material-icons" aria-hidden="true">games</span>
+                             <span itemprop="name">DWC Minecraft Server</span>
                           </a>
                        </h3>
-                       <p>A Minecraft server I run for the Discord Weather Center (DWC). It is cross-compatable with both Java and Bedrock.</p>
+                       <p itemprop="description">A Minecraft server I run for the Discord Weather Center (DWC). It is cross-compatible with both Java and Bedrock editions, providing a seamless gaming experience for all players.</p>
+                       <div class="project-meta">
+                           <span class="project-status active">Active</span>
+                           <span class="project-tech">Minecraft Server</span>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -143,7 +231,7 @@
         <section id="contact" class="card fade-in">
             <div class="card-header">
                 <h2>
-                    <span class="material-icons">contact_mail</span>
+                    <span class="material-icons" aria-hidden="true">contact_mail</span>
                     Get In Touch
                 </h2>
             </div>
@@ -151,29 +239,82 @@
                 <p>Feel free to connect with me through any of these platforms. I'm always open to discussing new projects and ideas!</p>
                 
                 <div class="contact-grid">
-                    
                     <div class="contact-item">
-                        <a href="https://discord.gg/5mzS2q9JbH">
-                            <span class="material-icons">forum</span>
+                        <a href="https://discord.gg/5mzS2q9JbH" rel="noopener noreferrer" target="_blank">
+                            <span class="material-icons" aria-hidden="true">forum</span>
                             DiscRealms Discord
                         </a>
                     </div>
                     <div class="contact-item">
-                        <a href="https://bsky.app/profile/pythonsden.net">
-                            <span class="material-icons">forum</span>
+                        <a href="https://bsky.app/profile/pythonsden.net" rel="noopener noreferrer" target="_blank">
+                            <span class="material-icons" aria-hidden="true">alternate_email</span>
                             BlueSky (@pythonsden.net)
                         </a>
                     </div>
                    <div class="contact-item">
-                      <a href="https://discord.gg/QuF9n8D9Ym" target="_blank">
-                        <span class="material-icons">forum</span>
-                    Discord Weather Center
+                      <a href="https://discord.gg/QuF9n8D9Ym" rel="noopener noreferrer" target="_blank">
+                        <span class="material-icons" aria-hidden="true">cloud</span>
+                        Discord Weather Center
                       </a>
                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Separate Message Section -->
+        <section id="message" class="card fade-in">
+            <div class="card-header">
+                <h2>
+                    <span class="material-icons" aria-hidden="true">send</span>
+                    Send Me a Message
+                </h2>
+            </div>
+            <div class="card-content">
+                <div class="contact-form-section">
+                    <h3>
+                        <span class="material-icons" aria-hidden="true">mail_outline</span>
+                        Let's Connect
+                    </h3>
+                    <p style="margin-bottom: 1.5rem; opacity: 0.9;">Have a question, project idea, or just want to say hello? I'd love to hear from you!</p>
+                    <form class="contact-form" action="https://formspree.io/f/xvgrqydv" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required aria-required="true" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="_replyto" required aria-required="true" placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="_subject" placeholder="What's this about?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell me about your project, question, or just say hi!"></textarea>
+                        </div>
+                        
+                        <!-- Hidden field to prevent spam -->
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="material-icons" aria-hidden="true">send</span>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" style="display: none;">
+        <span class="material-icons">keyboard_arrow_up</span>
+    </button>
 
     <footer>
         <p>&copy; 2025 Python's Den. All rights reserved. Built with ❤️</p>
