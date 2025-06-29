@@ -116,6 +116,25 @@ window.addEventListener('resize', function() {
     }
 });
 
+// // Back to top button functionality
+// const backToTopBtn = document.getElementById('backToTop');
+
+// window.addEventListener('scroll', function() {
+//     if (window.pageYOffset > 300) {
+//         backToTopBtn.style.display = 'block';
+//     } else {
+//         backToTopBtn.style.display = 'none';
+//     }
+// });
+
+// backToTopBtn.addEventListener('click', function() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// });
+
+// Enhanced form handling with better UX
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('#message .contact-form');
     
@@ -135,4 +154,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3000);
         });
     }
+    
+    // Add focus animations to form inputs
+    const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.style.transform = 'scale(1.02)';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'scale(1)';
+        });
+    });
 });

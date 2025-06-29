@@ -291,6 +291,72 @@ nav a.external::after {
     color: #aecbfa;
 }
 
+/* Project Status Styles */
+.project-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-status.active {
+    background: #1a7f37;
+    color: #ffffff;
+}
+
+.project-status.inactive {
+    background: #cf222e;
+    color: #ffffff;
+}
+
+.project-status.maintenance {
+    background: #fb8500;
+    color: #ffffff;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #2d2d2d;
+}
+
+.skills-section h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e8eaed;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+}
+
 /* Contact Links */
 .contact-grid {
     display: grid;
@@ -359,11 +425,19 @@ footer {
     }
 
     header {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     header h1 {
         font-size: 2rem;
+    }
+    
+    nav {
+        top: 100px;
+    }
+    
+    body {
+        padding-top: 160px;
     }
 
     .container {
@@ -473,6 +547,10 @@ nav a.active {
         background: none !important;
         color: black !important;
         border: 1px solid #ddd;
+    }
+    
+    .back-to-top {
+        display: none;
     }
 }
 
