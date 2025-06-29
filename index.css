@@ -425,19 +425,11 @@ footer {
     }
 
     header {
-        padding: 1.5rem 1rem;
+        padding: 2rem 1rem;
     }
 
     header h1 {
         font-size: 2rem;
-    }
-    
-    nav {
-        top: 100px;
-    }
-    
-    body {
-        padding-top: 160px;
     }
 
     .container {
@@ -534,7 +526,7 @@ nav a.active {
     }
     
     nav {
-        display: none;
+        display: none !important;
     }
     
     .card {
