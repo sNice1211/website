@@ -151,6 +151,22 @@
             font-size: 1.5rem;
         }
 
+        .no-collect-box {
+            background: linear-gradient(135deg, #dc3545 0%, #e74c3c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .no-collect-box::before {
+            content: "🚫";
+            font-size: 1.5rem;
+        }
+
         .contact-info {
             background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
             color: white;
@@ -237,7 +253,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Vortex Bot Privacy Policy</h1>
+            <h1>Discord Bot Privacy Policy</h1>
             <p>Your privacy and data protection are important to us</p>
             <div class="effective-date">
                 <strong>Effective Date: July 17, 2025</strong>
@@ -246,43 +262,48 @@
 
         <div class="content">
             <div class="intro">
-                <p>This document explains how Vortex Bot handles data when used in Discord servers. We are committed to protecting your privacy and being transparent about our data practices.</p>
+                <p>This Privacy Policy applies to all Discord bots ("Bots") developed and maintained by us. It outlines how your information is handled when you interact with our Bots on the Discord platform.</p>
             </div>
 
             <div class="section">
                 <h2>
                     <span class="section-number">1</span>
-                    What We Collect
+                    What Data We Collect
                 </h2>
-                <p>Vortex Bot collects and uses the following data during its operation:</p>
+                <p>Depending on the features and functionality of a given Bot, the following information may be collected during normal operation:</p>
                 
                 <div class="data-type">
-                    <strong>User Information:</strong> Discord user ID, username, and discriminator.
+                    <strong>User Information:</strong> Discord user IDs, usernames, and discriminators
                 </div>
                 
                 <div class="data-type">
-                    <strong>Guild & Channel Data:</strong> Server ID, name, and the channel used to invoke a command.
+                    <strong>Guild Information:</strong> Server (guild) IDs, names, and channel IDs where commands are used
                 </div>
                 
                 <div class="data-type">
-                    <strong>Command Usage Logs:</strong> Timestamps, command names, and arguments (e.g., city for weather lookups).
+                    <strong>Command Input:</strong> Command names, options, and arguments (e.g., city names, timezones)
                 </div>
                 
                 <div class="data-type">
-                    <strong>Weather Lookup Data:</strong> API queries to OpenWeatherMap (city names only, not user information).
+                    <strong>Metadata:</strong> Timestamps of usage, interaction logs, and system performance details
                 </div>
                 
                 <div class="data-type">
-                    <strong>Temporary Caching:</strong> Cached weather data for performance (stored for up to 30 minutes).
+                    <strong>Bot Analytics:</strong> Guild count, user count, uptime, latency, and usage frequency
                 </div>
                 
                 <div class="data-type">
-                    <strong>Console Commands (admin only):</strong> Server-wide broadcasting or command viewing via the console interface.
+                    <strong>Temporary Caching:</strong> Data such as weather results or API responses may be temporarily cached for performance
                 </div>
 
-                <div class="highlight-box">
+                <div class="no-collect-box">
                     <div>
-                        <strong>No personal information beyond what is provided by Discord is collected or permanently stored.</strong>
+                        <strong>We do not collect:</strong>
+                        <ul style="margin: 10px 0 0 20px;">
+                            <li>Personal information outside of Discord</li>
+                            <li>Direct messages or message history (unless explicitly permitted and clearly disclosed)</li>
+                            <li>Any data unrelated to the operation of the Bots</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -290,14 +311,21 @@
             <div class="section">
                 <h2>
                     <span class="section-number">2</span>
-                    How Data Is Used
+                    How We Use Your Data
                 </h2>
-                <p>The data we collect is used for the following purposes:</p>
+                <p>Data is used solely to:</p>
                 <ul>
-                    <li>To operate features like weather, timezones, and user/server info.</li>
-                    <li>To log and debug bot behavior (e.g., error handling or command failures).</li>
-                    <li>To prevent command spamming via cooldowns.</li>
+                    <li>Respond to commands and provide bot features</li>
+                    <li>Maintain cooldowns and prevent spam</li>
+                    <li>Log interactions for debugging, diagnostics, and support</li>
+                    <li>Improve functionality and track bot performance</li>
                 </ul>
+
+                <div class="highlight-box">
+                    <div>
+                        <strong>We do not sell, rent, or share data with third parties.</strong>
+                    </div>
+                </div>
             </div>
 
             <div class="section">
@@ -305,15 +333,16 @@
                     <span class="section-number">3</span>
                     Data Retention
                 </h2>
-                <p>We follow strict data retention policies to protect your information:</p>
                 
                 <div class="retention-info">
-                    <p><strong>Logs:</strong> Most data is not stored persistently, except logs which are rotated and retained for up to 30 days.</p>
+                    <p><strong>Logs and metadata:</strong> May be stored for up to 30 days for debugging and analytics.</p>
                 </div>
                 
                 <div class="retention-info">
-                    <p><strong>Cache:</strong> Cached weather responses are cleared automatically after a set time.</p>
+                    <p><strong>Cached data:</strong> (e.g., weather results) is typically stored for a short period (e.g., 30 minutes).</p>
                 </div>
+
+                <p>Data may be retained longer only if required by Discord, applicable laws, or moderation tools explicitly configured for such use.</p>
             </div>
 
             <div class="section">
@@ -321,10 +350,11 @@
                     <span class="section-number">4</span>
                     Data Sharing
                 </h2>
-                <p>We take data sharing seriously and follow these principles:</p>
+                <p>We will only disclose data:</p>
                 <ul>
-                    <li><strong>No user data is ever sold or shared with third parties.</strong></li>
-                    <li>Data may be shared only to comply with legal obligations or Discord's requests.</li>
+                    <li>If required by law or in response to a valid request from Discord</li>
+                    <li>To protect the safety and integrity of our service</li>
+                    <li>With the express consent of the server owner or user involved (when applicable)</li>
                 </ul>
             </div>
 
@@ -333,12 +363,12 @@
                     <span class="section-number">5</span>
                     Your Rights
                 </h2>
-                <p>You have the following rights regarding your data:</p>
+                <p>You may request:</p>
                 
                 <div class="rights-list">
                     <ul>
-                        <li><strong>Data Deletion:</strong> Request deletion of any logged data associated with your Discord user ID.</li>
-                        <li><strong>Data Inquiry:</strong> Request clarification of what information has been collected about you.</li>
+                        <li><strong>Deletion:</strong> of log data associated with your Discord user ID</li>
+                        <li><strong>Data Summary:</strong> A summary of what information we have related to you</li>
                     </ul>
                 </div>
 
@@ -346,6 +376,14 @@
                 <div class="contact-info">
                     <strong>Discord: python1211</strong>
                 </div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <span class="section-number">6</span>
+                    Children's Privacy
+                </h2>
+                <p>Our Bots are not intended for users under the age of 13. If you are under 13, do not use the Bots or provide any data.</p>
             </div>
 
             <div class="last-updated">
