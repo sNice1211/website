@@ -659,3 +659,55 @@ nav a.active {
         padding: 1.5rem;
     }
 }
+
+.bot-policies {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.policy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.policy-btn:hover {
+    background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+}
+
+.policy-btn:active {
+    transform: translateY(0);
+}
+
+.policy-btn .material-icons {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .bot-policies {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .policy-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}
