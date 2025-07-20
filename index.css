@@ -660,54 +660,271 @@ nav a.active {
     }
 }
 
+/* Discord Bot Section Improvements */
+#discord-bot .card-content {
+    padding: 1.5rem;
+}
+
+.bot-features {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #5865f2;
+}
+
+.bot-features h3 {
+    color: #5865f2;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bot-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bot-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.bot-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00d4aa;
+    font-weight: bold;
+}
+
+/* Bot Action Buttons */
+.bot-actions {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.bot-invite-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #5865f2, #4752c4);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.bot-invite-btn:hover {
+    background: linear-gradient(135deg, #4752c4, #3c45a5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.bot-invite-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);
+}
+
+.bot-invite-btn .material-icons {
+    font-size: 1.2rem;
+}
+
+/* Policy Buttons */
 .bot-policies {
     display: flex;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .policy-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 500;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
-    font-family: inherit;
+    font-size: 0.9rem;
+    min-width: 120px;
+    justify-content: center;
 }
 
 .policy-btn:hover {
-    background: linear-gradient(135deg, #495057 0%, #343a40 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .policy-btn:active {
     transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .policy-btn .material-icons {
+    font-size: 1.1rem;
+}
+
+/* Bot Action Buttons - Updated for button elements */
+.bot-actions {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.bot-invite-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #5865f2, #4752c4);
+    color: white;
+    text-decoration: none;
+    border: none; /* Remove default button border */
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem; /* Ensure consistent font size */
+    font-family: inherit; /* Inherit font family */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.bot-invite-btn:hover {
+    background: linear-gradient(135deg, #4752c4, #3c45a5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+    color: white;
+}
+
+.bot-invite-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);
+}
+
+.bot-invite-btn:focus {
+    outline: 2px solid #5865f2;
+    outline-offset: 2px;
+}
+
+.bot-invite-btn .material-icons {
     font-size: 1.2rem;
 }
 
+/* Policy Buttons - Already properly styled as buttons */
+.bot-policies {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+}
+
+.policy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.policy-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.policy-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.policy-btn:focus {
+    outline: 2px solid #5865f2;
+    outline-offset: 2px;
+}
+
+.policy-btn .material-icons {
+    font-size: 1.1rem;
+}
+
+/* Special styling for different bot types */
+.bot-invite-btn:nth-child(1) {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.bot-invite-btn:nth-child(1):hover {
+    background: linear-gradient(135deg, #ee5a52, #dc4c41);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.bot-invite-btn:nth-child(2) {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+}
+
+.bot-invite-btn:nth-child(2):hover {
+    background: linear-gradient(135deg, #44a08d, #3d8b7a);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+/* Responsive Design for Bot Section */
 @media (max-width: 768px) {
+    .bot-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .bot-invite-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .bot-policies {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
     
     .policy-btn {
         width: 100%;
-        max-width: 250px;
         justify-content: center;
     }
 }
