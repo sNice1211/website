@@ -217,15 +217,6 @@
             border-left: 4px solid #17a2b8;
         }
 
-        .last-updated {
-            text-align: center;
-            color: #666;
-            font-style: italic;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
         @media (max-width: 768px) {
             .container {
                 margin: 10px;
@@ -255,9 +246,6 @@
         <div class="header">
             <h1>Discord Bot Privacy Policy</h1>
             <p>Your privacy and data protection are important to us</p>
-            <div class="effective-date">
-                <strong>Effective Date: July 17, 2025</strong>
-            </div>
         </div>
 
         <div class="content">
@@ -386,8 +374,8 @@
                 <p>Our Bots are not intended for users under the age of 13. If you are under 13, do not use the Bots or provide any data.</p>
             </div>
 
-            <div class="last-updated">
-                <p>This privacy policy was last updated on <span id="lastUpdated"></span></p>
+            <div class="effective-date">
+                <p>Effective: July 17, 2025 </p>
             </div>
 
             <div style="text-align: center;">
@@ -395,14 +383,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Set the last updated date to today
-        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    </script>
 </body>
 </html>

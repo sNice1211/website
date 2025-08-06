@@ -106,7 +106,6 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            margin-top: 20px;
         }
 
         .contact-info strong {
@@ -131,13 +130,13 @@
             box-shadow: 0 5px 15px rgba(88, 101, 242, 0.3);
         }
 
-        .last-updated {
+        .effective-date {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
             text-align: center;
-            color: #666;
-            font-style: italic;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
@@ -239,8 +238,10 @@
                 </div>
             </div>
 
-            <div class="last-updated">
-                <p>Last updated: <span id="lastUpdated"></span></p>
+            <div class="contact-info">
+                <div class="effective-date">
+                    <strong>Effective: July 17, 2025</strong>
+                </div>
             </div>
 
             <div style="text-align: center;">
@@ -248,14 +249,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Set the last updated date to today
-        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    </script>
 </body>
 </html>
