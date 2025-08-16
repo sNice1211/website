@@ -60,6 +60,7 @@
         <h1>Welcome to Python's Den</h1>
         <p>Hi there! Explore my personal projects and journey in development.</p>
     </header>
+
     
     <nav role="navigation" aria-label="Main navigation">
         <div class="nav-container">
@@ -223,6 +224,36 @@
         </section>
     </main>
 
+    <!-- Python's Den Panel Status Card -->
+    <div class="card" style="background: #23272f; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.5); padding: 40px 32px 32px 32px; min-width: 320px; max-width: 90vw; text-align: center; margin: 32px auto; color: #e0e0e0; font-family: 'Segoe UI', Arial, sans-serif;">
+        <h1 style="font-size: 2.2em; margin-bottom: 18px; color: #4fd1c5; letter-spacing: 1px;">Python's Den Server Status</h1>
+        <div class="desc" style="font-size: 1em; color: #b0b0b0; margin-bottom: 10px;">Checks every 30 seconds</div>
+        <div id="status" class="status" style="font-size: 2.5em; margin: 24px 0 10px 0; font-weight: bold; transition: color 0.3s;">Checking...</div>
+        <div id="lastChecked" class="last-checked" style="font-size: 0.95em; color: #888; margin-top: 8px;"></div>
+    </div>
+    <script>
+        function formatTime(date) {
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+        async function checkStatus() {
+            const statusDiv = document.getElementById('status');
+            const lastCheckedDiv = document.getElementById('lastChecked');
+            try {
+                await fetch('https://panel.pythonsden.net', { method: 'HEAD', mode: 'no-cors' });
+                statusDiv.textContent = 'Up';
+                statusDiv.className = 'status up';
+                statusDiv.style.color = '#38d39f';
+            } catch (e) {
+                statusDiv.textContent = 'Down';
+                statusDiv.className = 'status down';
+                statusDiv.style.color = '#e53e3e';
+            }
+            lastCheckedDiv.textContent = 'Last checked: ' + formatTime(new Date());
+        }
+        checkStatus();
+        setInterval(checkStatus, 30 * 1000);
+    </script>
+    
     <footer>
         <p>&copy; 2025 Python's Den. All rights reserved. Built with ❤️</p>
     </footer>
