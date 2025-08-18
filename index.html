@@ -249,14 +249,32 @@
     
     <footer>
     <div class="server-status-card">
-        <div class="ssc-title">Server Status</div>
+        <div class="ssc-title">Python server</div>
         <div class="ssc-desc desc">Checks every 30s</div>
         <div id="status" class="ssc-status status">Checking...</div>
         <div id="lastChecked" class="ssc-last-checked last-checked"></div>
     </div>
         <p>&copy; 2025 Python's Den. All rights reserved. Built with ❤️</p>
-    </footer>
+    <script>
+        function formatTime(date) {
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+        async function checkStatus() {
+            const statusDiv = document.getElementById('status');
+            const lastCheckedDiv = document.getElementById('lastChecked');
+            try {
+                await fetch('https://panel.pythonsden.net', { method: 'HEAD', mode: 'no-cors' });
+                statusDiv.textContent = 'Up';
+                statusDiv.className = 'status up';
+                statusDiv.style.color = '#38d39f';
+            } catch (e) {
+                statusDiv.textContent = 'Down';
+                statusDiv.className = 'status down';
+                statusDiv.style.color = '#e53e3e';
+            }
+            lastCheckedDiv.textContent = 'Last checked: ' + formatTime(new Date());
+        }
+        checkStatus();
+        setInterval(checkStatus, 30 * 1000);
 
-    <script type="text/javascript" src="index.js"></script>
-</body>
-</html>
+    </script>

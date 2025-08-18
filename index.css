@@ -1,3 +1,12 @@
+.server-status-card-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    top: auto;
+    margin: 0;
+    text-align: center;
+}
 .server-status-card {
     position: fixed;
     top: 0;
@@ -5,9 +14,9 @@
     background: #23272f;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-    padding: 18px 22px 14px 22px;
-    min-width: 180px;
-    max-width: 90vw;
+    padding: 8px 12px 8px 12px;
+    min-width: 120px;
+    max-width: 60vw;
     text-align: center;
     color: #e0e0e0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -16,7 +25,7 @@
 }
 
 .ssc-title {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 6px;
     color: #4fd1c5;
     font-weight: 500;
@@ -30,7 +39,7 @@
 }
 
 .ssc-status {
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin: 10px 0 4px 0;
     font-weight: bold;
     transition: color 0.3s;
