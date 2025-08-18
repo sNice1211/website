@@ -1,3 +1,75 @@
+.server-status-card {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #23272f;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    padding: 18px 22px 14px 22px;
+    min-width: 180px;
+    max-width: 90vw;
+    text-align: center;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    z-index: 1000;
+    margin: 0;
+}
+
+.ssc-title {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+    color: #4fd1c5;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.ssc-desc {
+    font-size: 0.85em;
+    color: #b0b0b0;
+    margin-bottom: 4px;
+}
+
+.ssc-status {
+    font-size: 1.5em;
+    margin: 10px 0 4px 0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.ssc-last-checked {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+    .server-status-card {
+        display: none !important;
+    }
+}
+/* Server Status Card Styles */
+.server-status-card {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #23272f;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    padding: 18px 22px 14px 22px;
+    min-width: 180px;
+    max-width: 90vw;
+    text-align: center;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    z-index: 1000;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .server-status-card {
+        display: none !important;
+    }
+}
 /* General Styles */
 * {
     margin: 0;

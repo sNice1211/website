@@ -162,8 +162,7 @@
             </div>
             <div class="card-content">
                 <p>Here are some of the projects I've been working on. Each one represents a different aspect of my development journey.</p>
-                
-                <div class="projects-grid">
+                <div class="projects-grid" style="position: relative;">
                     <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
                         <h3>
                             <a href="/discord/index.html" itemprop="url">
@@ -223,14 +222,8 @@
             </div>
         </section>
     </main>
-
-    <!-- Python's Den Panel Status Card -->
-    <div class="card" style="background: #23272f; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.5); padding: 40px 32px 32px 32px; min-width: 320px; max-width: 90vw; text-align: center; margin: 32px auto; color: #e0e0e0; font-family: 'Segoe UI', Arial, sans-serif;">
-        <h1 style="font-size: 2.2em; margin-bottom: 18px; color: #4fd1c5; letter-spacing: 1px;">Python's Den Server Status</h1>
-        <div class="desc" style="font-size: 1em; color: #b0b0b0; margin-bottom: 10px;">Checks every 30 seconds</div>
-        <div id="status" class="status" style="font-size: 2.5em; margin: 24px 0 10px 0; font-weight: bold; transition: color 0.3s;">Checking...</div>
-        <div id="lastChecked" class="last-checked" style="font-size: 0.95em; color: #888; margin-top: 8px;"></div>
-    </div>
+    
+    <!-- Python's Den Panel Status Card (compact, bottom right) -->
     <script>
         function formatTime(date) {
             return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -255,6 +248,12 @@
     </script>
     
     <footer>
+    <div class="server-status-card">
+        <div class="ssc-title">Server Status</div>
+        <div class="ssc-desc desc">Checks every 30s</div>
+        <div id="status" class="ssc-status status">Checking...</div>
+        <div id="lastChecked" class="ssc-last-checked last-checked"></div>
+    </div>
         <p>&copy; 2025 Python's Den. All rights reserved. Built with ❤️</p>
     </footer>
 
