@@ -2,10 +2,13 @@
 const burgerMenu = document.getElementById('burgerMenu');
 const mobileMenu = document.getElementById('mobileMenu');
 
-burgerMenu.addEventListener('click', function() {
+function toggleMenu() {
     burgerMenu.classList.toggle('active');
     mobileMenu.classList.toggle('active');
-});
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+}
+
+burgerMenu.addEventListener('click', toggleMenu);
 
 // Close mobile menu when clicking on a link
 const mobileLinks = document.querySelectorAll('.mobile-menu a');
@@ -13,6 +16,7 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', function() {
         burgerMenu.classList.remove('active');
         mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
     });
 });
 
@@ -22,6 +26,7 @@ document.addEventListener('click', function(event) {
     if (!isClickInsideNav && mobileMenu.classList.contains('active')) {
         burgerMenu.classList.remove('active');
         mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
     }
 });
 
