@@ -139,6 +139,28 @@ window.addEventListener('resize', function() {
 //     });
 // });
 
+function formatTime(date) {
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+}
+async function checkStatus() {
+    const statusDiv = document.getElementById('status');
+    const lastCheckedDiv = document.getElementById('lastChecked');
+    try {
+        await fetch('https://panel.pythonsden.net', { method: 'HEAD', mode: 'no-cors' });
+        statusDiv.textContent = 'Up';
+        statusDiv.className = 'status up';
+        statusDiv.style.color = '#38d39f';
+    } catch (e) {
+        statusDiv.textContent = 'Down';
+        statusDiv.className = 'status down';
+        statusDiv.style.color = '#e53e3e';
+    }
+    lastCheckedDiv.textContent = 'Last checked: ' + formatTime(new Date());
+}
+checkStatus();
+setInterval(checkStatus, 30 * 1000);
+
+
 // Enhanced form handling with better UX
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('#message .contact-form');

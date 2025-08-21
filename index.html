@@ -218,31 +218,6 @@
             </div>
         </section>
     </main>
-    
-    <!-- Python's Den Panel Status Card (compact, bottom right)
-    <script>
-        function formatTime(date) {
-            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        }
-        async function checkStatus() {
-            const statusDiv = document.getElementById('status');
-            const lastCheckedDiv = document.getElementById('lastChecked');
-            try {
-                await fetch('https://panel.pythonsden.net', { method: 'HEAD', mode: 'no-cors' });
-                statusDiv.textContent = 'Up';
-                statusDiv.className = 'status up';
-                statusDiv.style.color = '#38d39f';
-            } catch (e) {
-                statusDiv.textContent = 'Down';
-                statusDiv.className = 'status down';
-                statusDiv.style.color = '#e53e3e';
-            }
-            lastCheckedDiv.textContent = 'Last checked: ' + formatTime(new Date());
-        }
-        checkStatus();
-        setInterval(checkStatus, 30 * 1000);
-    </script>
-     -->
 
     <footer>
     <div class="server-status-card">
@@ -252,29 +227,6 @@
         <div id="lastChecked" class="ssc-last-checked last-checked"></div>
     </div>
         <p>&copy; 2025 Python's Den. All rights reserved. Built with ❤️</p>
-    <script>
-        function formatTime(date) {
-            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        }
-        async function checkStatus() {
-            const statusDiv = document.getElementById('status');
-            const lastCheckedDiv = document.getElementById('lastChecked');
-            try {
-                await fetch('https://panel.pythonsden.net', { method: 'HEAD', mode: 'no-cors' });
-                statusDiv.textContent = 'Up';
-                statusDiv.className = 'status up';
-                statusDiv.style.color = '#38d39f';
-            } catch (e) {
-                statusDiv.textContent = 'Down';
-                statusDiv.className = 'status down';
-                statusDiv.style.color = '#e53e3e';
-            }
-            lastCheckedDiv.textContent = 'Last checked: ' + formatTime(new Date());
-        }
-        checkStatus();
-        setInterval(checkStatus, 30 * 1000);
-
-    </script>
     <script src="index.js" defer></script>
     </footer>
 </body>
